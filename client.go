@@ -85,8 +85,8 @@ func (c *Client) Close() error {
 		return ErrClosed
 	}
 	defer func() {
-		c.buf = nil
-		c.reader = nil
+		// c.buf = nil
+		// c.reader = nil
 		c.conn = nil
 	}()
 	if err := c.conn.Close(); err != nil {
